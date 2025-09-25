@@ -1,0 +1,34 @@
+### REGISTRAR USUÁRIO
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "daniel",
+  "email": "daniel@email.com",
+  "password": "daniel",
+  "role": "manager"
+}
+
+### LOGIN
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "daniel@email.com",
+  "password": "daniel"
+}
+
+### CRIAR CURSO (substitua o token abaixo pelo que você recebeu no login)
+POST http://localhost:3000/courses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMDU1NmRkZS01NDM3LTQyY2QtYWYzZS1lMWI2NjY0OWQwMDgiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1ODgyNzg1M30.t-31yXdaAIeFYqv-yOGN-C0u4enRVbCd5aCeSe5Qb7U
+
+{
+  "title": "Test01"
+}
+
+### LISTAR TODOS OS CURSOS
+GET http://localhost:3000/courses
+
+### VER CURSO POR ID
+GET http://localhost:3000/courses/df825579-5262-45b4-b16c-49e05c6b7164
