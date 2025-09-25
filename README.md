@@ -11,6 +11,7 @@ Este proyecto es una API backend avanzada construida con Node.js, Fastify, Drizz
 - **TypeScript**
 - **Swagger**
 - **Scalar**
+--
 
 ## Estructura del Proyecto
 ```
@@ -58,6 +59,15 @@ src/
 - `db/` — Cliente, esquema y seed de la base de datos
 - `utils/` — Funciones utilitarias
 
+
+variavles ambientes
+
+NODE_ENV=development
+
+DATABASE_URL=postgresql://admin:senha@localhost:5440/mi_db
+
+
+JWT_SECRET=minhachavedireta
 ## Autor
 JuanSanz11
 - JuanSanz11
